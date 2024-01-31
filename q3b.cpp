@@ -11,7 +11,7 @@ void bresenhamline(int x1, int y1, int x2, int y2)
     int ddown = 2 * dy;
     int x = x1, y = y1;
 
-    while (x2 > x) // assumption
+    while (x2 >= x) // assumption
     {
         cout << "(" << x << "," << y << ")\n";
         if (x == x2 && y == y2)

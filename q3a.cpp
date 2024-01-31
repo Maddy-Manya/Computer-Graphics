@@ -1,13 +1,14 @@
 #include <iostream>
 #include <graphics.h>
-#include <math.h>
+#include <cmath>
 using namespace std;
 
-void ddaline(float x1, float y1, float x2, float y2)
+void ddaline(int x1, int y1, int x2, int y2)
 {
     float m = (y2 - y1) / (x2 - x1);
-    float x = x1, y = y1;
-    while (x2 > x)
+    float x = x1;
+    float y = y1;
+    while (x2 >= x)
     {
         cout << "(" << round(x) << "," << round(y) << ")\n";
         if (x == x2 && y == y2)
@@ -19,17 +20,11 @@ void ddaline(float x1, float y1, float x2, float y2)
             y += 1;
             x = x + (1 / m);
         }
-        else if (m < 1)
+        else if (m <= 1)
         {
             putpixel(x, y, 12);
             x += 1;
             y = y + m;
-        }
-        else
-        {
-            putpixel(x, y, 12);
-            x += 1;
-            y += 1;
         }
     }
 }
