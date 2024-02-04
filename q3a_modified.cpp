@@ -7,7 +7,7 @@ void ddaline(int x1, int y1, float m)
 {
     float x = x1;
     float y = y1;
-    for (int i = 0; i < 1000; ++i)
+    for (int i = 0; i < 1000; i++)
     {
         cout << "(" << round(x) << "," << round(y) << ")\n";
         putpixel(round(x), round(y), 12);
@@ -33,7 +33,7 @@ int main()
     int x1, y1, m;
     cout << "Enter values for (x1,y1) : ";
     cin >> x1 >> y1;
-    cout << "Enter values for slope : ";
+    cout << "Enter value for slope : ";
     cin >> m;
     cout << "Resulting Points Using DDA's Algorithm ->\n";
 
