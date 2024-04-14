@@ -6,10 +6,13 @@ int main()
 {
     int gd = DETECT, gm;
     initgraph(&gd, &gm, (char *)"");
+
     // line-
     line(0, 0, getmaxx(), getmaxy());
+
     // circle-
     circle(300, 250, 150);
+
     // polygon-
     int vertices[] =
         {120, 250,
